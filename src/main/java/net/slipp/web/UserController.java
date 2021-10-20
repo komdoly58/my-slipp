@@ -42,9 +42,19 @@ public class UserController {
 			return "redirect:/users/loginform";
 		}
 		System.out.println("Login Success!");
-		session.setAttribute("user", user);
+		session.setAttribute("sessionUser", user);
 		return "redirect:/";
 	}
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		//session.invalidate();
+		/*session에 해당하는 이름을 매개변수로 넣어줘야 한다 */
+		/* key값을 sessionUser로 변경 */
+		session.removeAttribute("sessionUser");
+		System.out.println("Logout Success!");
+		return "redirect:/";
+	}
+	
 	@GetMapping("/form")
 	public String form() {
 		return "/user/form";
