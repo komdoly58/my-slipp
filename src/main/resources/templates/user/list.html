@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>SLiPP Java Web Programming</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="../css/styles.css" rel="stylesheet">
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+{{> /include/header}}
 </head>
 <body>
 {{> /include/navigation}}
@@ -24,7 +17,7 @@
                 </tr>
               </thead>
               <tbody>
-              {{#users}}
+              {{#sessionUsers}}
                 <tr>
                     <th scope="row">{{id}}</th>
                     <td>{{userId}}</td> 
@@ -32,7 +25,7 @@
                     <td>{{email}}</td>
                     <td><a href="/users/{{id}}/form" class="btn btn-success" role="button">수정</a></td>
                 </tr>
-               {{/users}}
+               {{/sessionUsers}}
               </tbody>
           </table>
         </div>
