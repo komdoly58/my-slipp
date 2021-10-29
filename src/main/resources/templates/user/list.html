@@ -17,7 +17,7 @@
                 </tr>
               </thead>
               <tbody>
-              {{#sessionUsers}}
+              {{#users}}
                 <tr>
                     <th scope="row">{{id}}</th>
                     <td>{{userId}}</td> 
@@ -25,7 +25,7 @@
                     <td>{{email}}</td>
                     <td><a href="/users/{{id}}/form" class="btn btn-success" role="button">수정</a></td>
                 </tr>
-               {{/sessionUsers}}
+               {{/users}}
               </tbody>
           </table>
         </div>
